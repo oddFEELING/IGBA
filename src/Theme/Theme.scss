@@ -1,0 +1,15 @@
+// create divs with primary light background
+@mixin Light-div($height, $width, $display) {
+  width: $width;
+  height: $height;
+  display: $display;
+  background-color: #f1f1f1;
+}
+
+// create divs with primary dark background
+@mixin dark-div($height, $width, $display) {
+  width: $width;
+  height: $height;
+  display: $display;
+  background-color: #14213d;
+}

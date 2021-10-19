@@ -1,0 +1,3 @@
+# React app wasn't created using CRA. 
+
+# EVery package should get their loader for the webpack bundler

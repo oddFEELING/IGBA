@@ -1,7 +1,12 @@
 import React from 'react';
+import Hero from '../hero/Hero';
 
 const App = () => {
-  return <div></div>;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 };
 
 export default App;
