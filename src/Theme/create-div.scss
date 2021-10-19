@@ -4,7 +4,7 @@
 
 @use './Theme.scss' as *;
 
-@mixin Light-div($height, $width, $display) {
+@mixin light-div($height, $width, $display) {
   width: $width;
   height: $height;
   display: $display;
@@ -19,4 +19,14 @@
   height: $height;
   display: $display;
   background-color: $color-primary;
+}
+
+//-------------------------------------------->
+// create divs with no preset
+//-------------------------------------------->
+@mixin div($height, $width, $display, $color) {
+  width: $width;
+  height: $height;
+  display: $display;
+  background-color: $color;
 }

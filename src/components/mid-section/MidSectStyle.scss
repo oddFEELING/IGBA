@@ -1,0 +1,8 @@
+@use '../../Theme/create-div.scss' as *;
+
+.mid-section-container {
+  @include dark-div(80vh, 95vw, flex);
+  margin: 70px 0;
+  border-radius: 0 10px 10px 0;
+  align-self: flex-start;
+}

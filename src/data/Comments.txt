@@ -25,7 +25,18 @@
 
 //--> create-div
 # dark-div
+    - Height
+    - width
+    - display
 # light-div
+    - Height
+    - width
+    - display
+# div
+    - Height
+    - width
+    - Display
+    - background-color
 
 
 //--> media-queries

@@ -1,0 +1,6 @@
+@use '../../Theme/create-div.scss' as *;
+@use '../../Theme/Theme.scss' as *;
+
+.feature-container {
+  @include div(120vh, 80%, flex, $color-light);
+}

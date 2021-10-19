@@ -1,0 +1,7 @@
+@use '../../Theme/create-div.scss' as *;
+@use '../../Theme/Theme.scss' as *;
+
+.foot-container {
+  @include dark-div(40vh, 80%, flex);
+  padding: 20px 10%;
+}
