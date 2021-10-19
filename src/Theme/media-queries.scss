@@ -1,0 +1,39 @@
+//-------------------------------------------->
+//--> media queries
+//-------------------------------------------->
+
+// set media queries as values into strings
+$breakPoints: (
+  'mobile': screen and
+    (
+      max-width: 500px,
+    ),
+  'tablet': screen and
+    (
+      min-width: 500px,
+    ),
+  'medium': screen and
+    (
+      min-width: 1000px,
+    ),
+  'desktop': screen and
+    (
+      min-width: 1300px,
+    ),
+) !default;
+
+// create mixin to respond to breakpoints
+@mixin media($breakPoint) {
+  // map through the breakpoints list
+  @if map-has-key($breakPoints, $breakPoint) {
+    // map through the breakpoints to give the values
+    @media #{inspect(map-get($breakPoints, $breakPoint ) )} {
+      @content;
+    }
+  }
+
+  //else value
+  @else {
+    @warn 'Unfortunately there is no break point set for this value' + 'available break points are: #{map-keys($breakPoints)}.';
+  }
+}

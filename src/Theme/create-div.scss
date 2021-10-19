@@ -1,0 +1,32 @@
+//-------------------------------------------->
+// create divs with primary light background
+//-------------------------------------------->
+
+@use './Theme.scss' as *;
+
+@mixin light-div($height, $width, $display) {
+  width: $width;
+  height: $height;
+  display: $display;
+  background-color: $color-light-two;
+}
+
+//-------------------------------------------->
+// create divs with primary dark background
+//-------------------------------------------->
+@mixin dark-div($height, $width, $display) {
+  width: $width;
+  height: $height;
+  display: $display;
+  background-color: $color-primary;
+}
+
+//-------------------------------------------->
+// create divs with no preset
+//-------------------------------------------->
+@mixin div($height, $width, $display, $color) {
+  width: $width;
+  height: $height;
+  display: $display;
+  background-color: $color;
+}

@@ -1,0 +1,8 @@
+@use '../../Theme/create-div.scss' as *;
+@use '../../Theme/Theme.scss' as *;
+
+.nav-container {
+  @include dark-div(9vh, 100%, flex);
+  @include back-color-alpha($color-light-two, 0.25);
+  position: fixed;
+}

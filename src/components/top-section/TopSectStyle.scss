@@ -1,0 +1,10 @@
+@use '../../Theme/create-div.scss' as *;
+@use '../../Theme/Theme.scss' as *;
+
+.top-section-container {
+  @include light-div(70vh, 60%, flex);
+  border-radius: 30px;
+  margin-top: -12vh;
+  padding: 20px 10%;
+  box-shadow: 3px 5px 10px 3px rgba(0, 0, 0, 0.25);
+}
