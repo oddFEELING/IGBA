@@ -1,3 +1,47 @@
-# React app wasn't created using CRA. 
+#########################################################################
+##############  THIS IS A HELPER TO NAVIGATE THIS CODE BASE #############
+######################  HOPE IT WAS HELPFUL THO  ########################
+#############################  🌹oddFEELING  #############################
 
-# EVery package should get their loader for the webpack bundler
+
+# ~React app wasn't created using CRA. 
+
+# ~EVery package should get their loader for the webpack bundler
+
+//-------------------------------------------->
+//--> Theme Contents
+//-------------------------------------------->
+
+//--> Theme
+# Theme.color-primary
+# Theme.color-secondary
+# Theme.color-light
+# Theme.color-light-two
+# Theme.color-dark
+# color transparency mixin 'back-color-alpha'
+    - $color
+    - $value
+
+
+//--> create-div
+# dark-div
+# light-div
+
+
+//--> media-queries
+# query break points with the term 'media'
+    - mobile
+    - tablet
+    - medium
+    - desktop
+
+
+
+//-------------------------------------------->
+//--> Data folder items
+//-------------------------------------------->
+
+//--> features Data
+//--> footer Data
+//--> mid card Data
+//--> top card data

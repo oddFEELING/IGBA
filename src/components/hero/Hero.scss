@@ -1,5 +1,7 @@
-@use '../../Theme/Theme.scss' as *;
+//--> import theme
+@use '../../Theme/create-div.scss' as *;
+@use '../../Theme/media-queries.scss' as *;
 
 .hero-container {
-  @include dark-div(300px, 200px, flex);
+  @include dark-div(100vh, 100%, flex);
 }

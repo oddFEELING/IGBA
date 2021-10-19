@@ -1,15 +1,15 @@
-// create divs with primary light background
-@mixin Light-div($height, $width, $display) {
-  width: $width;
-  height: $height;
-  display: $display;
-  background-color: #f1f1f1;
-}
+//-------------------------------------------->
+//--> Global color values
+//-------------------------------------------->
 
-// create divs with primary dark background
-@mixin dark-div($height, $width, $display) {
-  width: $width;
-  height: $height;
-  display: $display;
-  background-color: #14213d;
+//--> color SCheme
+$color-primary: #14213d;
+$color-secondary: #fca311;
+$color-light: #ffffff;
+$color-light-two: #f1f1f1;
+$color-dark: #1e1e1e;
+
+//--> mixin to set transparency
+@mixin back-color-alpha($color, $value) {
+  background-color: rgba($color, $value);
 }
