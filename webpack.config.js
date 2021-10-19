@@ -42,7 +42,7 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              implentation: require('sass'),
+              implementation: require('sass'),
             },
           },
         ],

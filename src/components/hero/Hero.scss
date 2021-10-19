@@ -1,0 +1,5 @@
+@use '../../Theme/Theme.scss' as *;
+
+.hero-container {
+  @include dark-div(300px, 200px, flex);
+}
