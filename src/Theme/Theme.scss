@@ -2,12 +2,33 @@
 //--> Global color values
 //-------------------------------------------->
 
+//-------------------------------------------->
 //--> color SCheme
+//-------------------------------------------->
 $color-primary: #14213d;
 $color-secondary: #fca311;
 $color-light: #ffffff;
 $color-light-two: #f1f1f1;
 $color-dark: #1e1e1e;
+
+//-------------------------------------------->
+//--> Fonts
+//-------------------------------------------->
+$font_red-hat-text: 'Red Hat Text', sans-serif;
+$font_barlow: 'Barlow', sans-serif;
+
+//-------------------------------------------->
+//--> MIXINS
+//-------------------------------------------->
+
+//--> mixin to set font
+@mixin set-font($font, $weight, $size, $color, $margin) {
+  font-family: $font;
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+  margin: $margin;
+}
 
 //--> mixin to set transparency
 @mixin back-color-alpha($color, $value) {
