@@ -1,0 +1,23 @@
+{
+  "short_name": "IGBA",
+  "name": "IGBA",
+  "description": "Mapping Development with ease",
+  "icons": [
+    {
+      "src": "location-pin.svg",
+      "type": "image/svg",
+      "size": "192 x 192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "location-pin.svg",
+      "type": "image/svg",
+      "size": "512 x 512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "",
+  "background_color": "#14213D",
+  "theme_color": "#14213D",
+  "display": "fullscreen"
+}

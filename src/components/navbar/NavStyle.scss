@@ -3,6 +3,6 @@
 
 .nav-container {
   @include dark-div(9vh, 100%, flex);
-  @include back-color-alpha($color-light-two, 0.25);
+  @include back-color-alpha($color-dark, 0.2);
   position: fixed;
 }
