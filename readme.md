@@ -1,2 +1,99 @@
 <h1>IGBA PRE LAUNCH</h1>
 author: oddFEELING
+
+#########################################################################
+############## THIS IS A HELPER TO NAVIGATE THIS CODE BODY #############
+###################### HOPE IT WAS HELPFUL THO ########################
+############################# 🌹oddFEELING ############################
+
+# ~React app wasn't created using CRA.
+
+# ~Check webpack config for more info on the specified modules or add plugins
+
+and loaders
+
+# ~EVery package should get their loader for the webpack bundler
+
+//-------------------------------------------->
+//---> Theme Contents
+//-------------------------------------------->
+
+//--> Theme
+
+# Theme.color-primary
+
+# Theme.color-secondary
+
+# Theme.color-light
+
+# Theme.color-light-two
+
+# Theme.color-dark
+
+# Theme.font_red-hat-text
+
+# Theme.font_barlow
+
+# color transparency mixin 'back-color-alpha'
+
+    - $color
+    - $value
+
+# font creation mixin 'set-font'
+
+    - $font
+    - $weight
+    - $size
+    - $color
+    - $margin
+
+//-------------------------------------------->
+//--> create-div mixins
+//-------------------------------------------->
+
+# dark-div
+
+    - Height
+    - width
+    - display
+
+# light-div
+
+    - Height
+    - width
+    - display
+
+# div
+
+    - Height
+    - width
+    - Display
+    - background-color
+
+//-------------------------------------------->
+//--> media-queries
+//-------------------------------------------->
+
+# query break points with the term 'media'
+
+    - mobile - max #500px
+    - tablet - min #500px
+    - medium - min #1000px
+    - desktop - min #1300px
+
+//-------------------------------------------->
+//---> All components as displayed
+//-------------------------------------------->
+#- Hero
+#- Top section
+#- Mid section
+#- features
+#- Foot
+
+//-------------------------------------------->
+//---> Data folder items
+//-------------------------------------------->
+#- features Data
+#- footer Data
+#- mid card Data
+#- top card data
