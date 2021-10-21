@@ -36,7 +36,12 @@ const Hero = () => {
       </div>
       {/* ----- image div ----- */}
       <div className='image-area--div'>
-        <img src={map_img} alt='' className='image-area--img' />
+        <img
+          src={map_img}
+          alt=''
+          className='image-area--img'
+          data-aos='zoom-out'
+        />
       </div>
     </header>
   );
