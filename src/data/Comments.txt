@@ -61,6 +61,7 @@
     - tablet - min #500px
     - medium - min #1000px
     - desktop - min #1300px
+    - medium-max - max #800px
 
 
 

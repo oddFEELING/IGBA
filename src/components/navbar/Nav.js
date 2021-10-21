@@ -51,13 +51,18 @@ const Nav = () => {
       <button className='nav-cta'>Subscribe</button>
 
       {/* ----- mobile menu BTN ----- */}
-      <div onClick={handleMenu} className='nav-mobile--menu-btn'>
+      <div
+        onClick={handleMenu}
+        className={
+          menuIsOpen ? 'nav-mobile--menu-btn open' : 'nav-mobile--menu-btn'
+        }
+      >
         <img
           src={menu}
           alt=''
           className={menuIsOpen ? 'nav-menu--img menu-open' : 'nav-menu--img'}
         />
-        <p>Menu</p>
+        <p>{menuIsOpen ? 'Close' : 'Menu'}</p>
       </div>
 
       {/* ----- mobile menu links section ----- */}

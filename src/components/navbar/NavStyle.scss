@@ -6,6 +6,7 @@
   @include dark-div(9vh, 100%, flex);
   @include back-color-alpha($color-primary, 0.4);
   min-height: 40px;
+  z-index: 3;
   align-items: center;
   justify-content: space-between;
   transition: 300ms all ease-in-out;
@@ -14,6 +15,7 @@
 
 .nav-scrolled {
   @include back-color-alpha($color-primary, 1);
+  box-shadow: 0 3px 6px 0 rgba($color-dark, 0.4);
 }
 
 //--------------------------------------------> logo div
@@ -115,8 +117,8 @@
   justify-content: center;
   border-radius: 2px;
   transition: 300ms all ease-in-out;
-  @include light-div(25px, 30px, flex);
-  @include back-color-alpha($color-light-two, 0.8);
+  @include light-div(25px, 40px, flex);
+  @include back-color-alpha($color-secondary, 0.8);
 
   @include media('tablet') {
     display: none;
@@ -130,6 +132,9 @@
       $color-primary,
       0
     );
+  }
+  &.open {
+    @include back-color-alpha(rgb(203, 83, 83), 0.9);
   }
 }
 
@@ -149,12 +154,13 @@
 .nav-mobile--links-div {
   @include div(25vh, 25%, flex, $color-light-two);
   top: 9vh;
-  right: 0;
+  right: 10px;
   opacity: 1;
   position: absolute;
   padding-left: 10%;
   flex-direction: column;
   min-height: 150px;
+  z-index: 3;
   justify-content: space-around;
   transition: 300ms all ease-in-out;
   box-shadow: 0 4px 10px 0 rgba($color-dark, 0.4);
@@ -162,6 +168,7 @@
 
   @include media('tablet') {
     display: none;
+    z-index: -1;
   }
 }
 
