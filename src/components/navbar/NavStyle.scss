@@ -134,7 +134,7 @@
     );
   }
   &.open {
-    @include back-color-alpha(rgb(203, 83, 83), 0.9);
+    @include back-color-alpha(rgb(203, 103, 13), 0.9);
   }
 }
 
@@ -152,16 +152,18 @@
 }
 //--------------------------------------------> mobile menu links
 .nav-mobile--links-div {
-  @include div(25vh, 25%, flex, $color-light-two);
+  @include div(auto, 25%, flex, $color-light-two);
   top: 9vh;
   right: 10px;
   opacity: 1;
   position: absolute;
+  padding: 3vh 0;
   padding-left: 10%;
   flex-direction: column;
   min-height: 150px;
   z-index: 3;
-  justify-content: space-around;
+  gap: 4vh;
+  justify-content: center;
   transition: 300ms all ease-in-out;
   box-shadow: 0 4px 10px 0 rgba($color-dark, 0.4);
   @include back-color-alpha($color-light-two, 0.9);

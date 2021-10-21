@@ -1,10 +1,32 @@
 @use '../../Theme/create-div.scss' as *;
 @use '../../Theme/Theme.scss' as *;
+@use '../../Theme/media-queries.scss' as *;
 
 .top-section-container {
-  @include light-div(70vh, 60%, flex);
+  width: 60%;
+  min-height: 70vh;
+  display: flex;
+  background-color: $color-light-two;
   border-radius: 30px;
   margin-top: -10vh;
   padding: 20px 10%;
+  padding-bottom: 60px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
   box-shadow: 3px 5px 10px 3px rgba(0, 0, 0, 0.25);
+}
+
+//--------------------------------------------> card container
+.top-card--container {
+  width: 100%;
+  min-height: 60%;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+
+  @include media('mobile') {
+    flex-direction: column;
+  }
 }

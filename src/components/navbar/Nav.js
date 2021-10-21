@@ -13,7 +13,7 @@ const Nav = () => {
 
   //-->  change bg color upon full screen scroll
   useEffect(() => {
-    if (scrollValue > window.innerHeight) {
+    if (scrollValue > window.innerHeight * 0.9) {
       setIsScrolled(true);
     } else {
       setIsScrolled(false);

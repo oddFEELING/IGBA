@@ -1,0 +1,119 @@
+@use '../../Theme/create-div.scss' as *;
+@use '../../Theme/Theme.scss' as *;
+@use '../../Theme/media-queries.scss' as *;
+
+.card-container {
+  @include div(100%, 20%, flex, $color-primary);
+  min-width: 200px;
+  min-height: 350px;
+  align-items: center;
+  padding: 2.5% 5%;
+  cursor: url(../../assets/images/icons/card-hover-icon.png), auto;
+  flex-direction: column;
+  transform-style: preserve-3d;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  border-radius: 30px;
+  padding-bottom: 6%;
+
+  &:hover {
+    box-shadow: 0 4px 10px 0 rgba($color-dark, 0.4);
+  }
+
+  @include media('mobile') {
+    min-height: 310px;
+    min-width: 220px;
+    padding-bottom: 13%;
+  }
+}
+
+//--------------------------------------------> top icon divs
+.card-circle--one {
+  @include div(150px, 150px, flex, rgba($color-light, 0.4));
+  border-radius: 75px;
+  align-items: center;
+  transform-style: preserve-3d;
+  justify-content: center;
+  transform: translateZ(15px);
+
+  @include media('mobile') {
+    @include div(120px, 120px, flex, rgba($color-light, 0.4));
+  }
+}
+.card-circle--two {
+  @include div(120px, 120px, flex, rgba($color-light, 0.6));
+  border-radius: 65px;
+  align-items: center;
+  transform-style: preserve-3d;
+  justify-content: center;
+  transform: translateZ(15px);
+
+  @include media('mobile') {
+    @include div(100px, 100px, flex, rgba($color-light, 0.4));
+  }
+}
+
+.card-circle--three {
+  @include div(90px, 90px, flex, rgba($color-light, 0.8));
+  border-radius: 65px;
+  align-items: center;
+  transform-style: preserve-3d;
+  justify-content: center;
+  transform: translateZ(15px);
+
+  @include media('mobile') {
+    @include div(80px, 80px, flex, rgba($color-light, 0.4));
+  }
+}
+
+.card-circle--four {
+  @include div(60px, 60px, flex, rgba($color-light, 0.9));
+  border-radius: 65px;
+  align-items: center;
+  transform-style: preserve-3d;
+  justify-content: center;
+  transform: translateZ(15px);
+
+  @include media('mobile') {
+    @include div(60px, 60px, flex, rgba($color-light, 0.4));
+  }
+}
+
+//--------------------------------------------> top icon img
+.card-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  object-position: center;
+  transform: translateZ(25px);
+
+  @include media('mobile') {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+//--------------------------------------------> card texts
+.card-content--title {
+  @include set-font(
+    $font_barlow,
+    600,
+    clamp(1.3rem, 2vw, 2rem),
+    $color-light-two,
+    0
+  );
+  transform: translateZ(50px);
+}
+
+.card-content--text {
+  @include set-font(
+    $font_barlow,
+    300,
+    clamp(0.5rem, 2.5vw, 1rem),
+    $color-light-two,
+    0
+  );
+  transform: translateZ(40px);
+  width: 85%;
+}
