@@ -3,20 +3,41 @@
 @use '../../Theme/media-queries.scss' as *;
 
 .top-section-container {
-  width: 60%;
+  width: 65%;
   min-height: 70vh;
   display: flex;
   background-color: $color-light-two;
   border-radius: 30px;
   margin-top: -10vh;
   padding: 20px 10%;
+  gap: 40px;
+  text-align: center;
   padding-bottom: 60px;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   box-shadow: 3px 5px 10px 3px rgba(0, 0, 0, 0.25);
+
+  // mobile screen
+  @include media('mobile') {
+    width: 72%;
+  }
+  // mid ranged screen optimization
+  @media (min-width: 801px) and (max-width: 1100px) {
+    width: 75%;
+  }
 }
 
+//-------------------------------------------->  Title text
+.top-section--title {
+  @include set-font(
+    $font_barlow,
+    600,
+    clamp(1.8rem, 2vw, 2rem),
+    $color-primary,
+    0
+  );
+}
 //--------------------------------------------> card container
 .top-card--container {
   width: 100%;
@@ -26,7 +47,7 @@
   align-items: center;
   justify-content: center;
 
-  @include media('mobile') {
+  @include media('medium-max') {
     flex-direction: column;
   }
 }

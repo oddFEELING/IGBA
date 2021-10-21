@@ -11,6 +11,7 @@
   justify-content: space-between;
   transition: 300ms all ease-in-out;
   position: fixed;
+  cursor: url(../../assets/images/icons/location-cursor.png), auto;
 }
 
 .nav-scrolled {
@@ -69,6 +70,7 @@
   );
   text-decoration: none;
   transition: 300ms all ease-in-out;
+  cursor: url(../../assets/images/icons/location-cursor-hover.png), pointer;
 
   &:hover {
     transform: scale(1.03);
@@ -86,12 +88,13 @@
   @include set-font(
     $font_red-hat-text,
     600,
-    clamp(0.4rem, 0.9vw, 1.2rem),
+    clamp(0.6rem, 0.9vw, 1.2rem),
     $color-primary,
     0
   );
-  cursor: pointer;
+  cursor: url(../../assets/images/icons/location-cursor-hover.png), pointer;
   width: 8%;
+  min-width: 75px;
   height: 50%;
   border: none;
   margin-right: 7vw;
@@ -119,6 +122,7 @@
   transition: 300ms all ease-in-out;
   @include light-div(25px, 40px, flex);
   @include back-color-alpha($color-secondary, 0.8);
+  cursor: url(../../assets/images/icons/location-cursor-hover.png), pointer;
 
   @include media('tablet') {
     display: none;

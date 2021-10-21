@@ -1,15 +1,22 @@
 import React from 'react';
+import MidImg from '../../assets/svg/mid-section-img.svg';
 import './MidSectStyle.scss';
+//-->  import mid section data
+import Content from '../../data/mid-section-data/Data';
 
 const MidSection = () => {
   return (
-    <div className='mid-section-container'>
+    <section className='mid-section-container'>
       {/* ----- content area div ----- */}
-      {/* title */}
-      {/* content */}
-
+      <div className='mid-section--text-container'>
+        {/* title */}
+        <h2 className='mid-section--title'>{Content.title}</h2>
+        {/* content */}
+        <p className='mid-section--content'>{Content.content}</p>
+      </div>
       {/* ----- image area div ----- */}
-    </div>
+      <img src={MidImg} alt='' className='mid-section--img' />
+    </section>
   );
 };
 

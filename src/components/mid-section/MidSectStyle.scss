@@ -1,8 +1,84 @@
 @use '../../Theme/create-div.scss' as *;
+@use '../../Theme/media-queries.scss' as *;
+@use '../../Theme/Theme.scss' as *;
 
 .mid-section-container {
   @include dark-div(80vh, 95vw, flex);
+  min-height: 650px;
   margin: 70px 0;
+  position: relative;
   border-radius: 0 10px 10px 0;
   align-self: flex-start;
+  // minmum height for mobile
+  @include media('mobile') {
+    min-height: 500px;
+  }
+  // hide when screen is smaller
+  @media (max-width: 1200px) {
+    width: 88%;
+    padding: 0 6%;
+  }
+}
+
+.mid-section--img {
+  width: 45%;
+  height: 80%;
+  bottom: 0;
+  right: -5vw;
+  position: absolute;
+  object-fit: contain;
+  object-position: bottom;
+
+  // optimize for smaller laptops
+  @media (min-width: 1201px) and (max-width: 1550px) {
+    right: -7.8vw;
+    width: 55%;
+  }
+
+  // hide when screen is smaller
+  @media (max-width: 1200px) {
+    display: none;
+  }
+}
+
+//--------------------------------------------> text area div
+.mid-section--text-container {
+  @include div(75%, 55%, flex, transparent);
+  flex-direction: column;
+  padding-top: 5%;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+
+  // change upon image removal
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+}
+
+//  Titlt text
+.mid-section--title {
+  @include set-font(
+    $font_barlow,
+    700,
+    clamp(1.6rem, 3.2vw, 3.5rem),
+    $color-light-two,
+    0
+  );
+  position: relative;
+  letter-spacing: 3px;
+  margin-left: 5vw;
+}
+
+// content text
+.mid-section--content {
+  @include set-font(
+    $font_barlow,
+    200,
+    clamp(1.1rem, 1.9vw, 1.8rem),
+    $color-light-two,
+    0
+  );
+  letter-spacing: 1px;
+  margin-left: 10vw;
 }
