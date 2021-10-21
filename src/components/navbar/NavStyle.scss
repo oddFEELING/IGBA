@@ -1,8 +1,181 @@
 @use '../../Theme/create-div.scss' as *;
 @use '../../Theme/Theme.scss' as *;
+@use '../../Theme/media-queries.scss' as *;
 
 .nav-container {
   @include dark-div(9vh, 100%, flex);
-  @include back-color-alpha($color-dark, 0.2);
+  @include back-color-alpha($color-primary, 0.4);
+  min-height: 40px;
+  z-index: 3;
+  align-items: center;
+  justify-content: space-between;
+  transition: 300ms all ease-in-out;
   position: fixed;
+}
+
+.nav-scrolled {
+  @include back-color-alpha($color-primary, 1);
+  box-shadow: 0 3px 6px 0 rgba($color-dark, 0.4);
+}
+
+//--------------------------------------------> logo div
+.nav-logo--div {
+  align-items: center;
+  padding: 0 3vw;
+  justify-content: flex-start;
+  gap: 1vh;
+  margin-left: 3vw;
+  @include div(100%, 20%, flex, transparent);
+}
+
+.nav-logo--text {
+  @include set-font(
+    $font_red-hat-text,
+    800,
+    clamp(1.3rem, 1.5vw, 2.2rem),
+    $color-secondary,
+    0
+  );
+}
+
+.nav-logo--img {
+  width: 8%;
+  min-width: 18px;
+  height: 75%;
+  object-fit: contain;
+  object-position: center;
+}
+
+//--------------------------------------------> Desktop links div
+.nav-links--div {
+  width: 30%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  @include media('mobile') {
+    display: none;
+  }
+}
+
+.nav-link {
+  @include set-font(
+    $font_red-hat-text,
+    500,
+    clamp(0.65rem, 1.1vw, 1.3rem),
+    $color-light-two,
+    0
+  );
+  text-decoration: none;
+  transition: 300ms all ease-in-out;
+
+  &:hover {
+    transform: scale(1.03);
+    color: $color-secondary;
+  }
+}
+
+.nav-link.mobile {
+  color: $color-primary;
+  display: inline;
+}
+
+//--------------------------------------------> CTA BTN
+.nav-cta {
+  @include set-font(
+    $font_red-hat-text,
+    600,
+    clamp(0.4rem, 0.9vw, 1.2rem),
+    $color-primary,
+    0
+  );
+  cursor: pointer;
+  width: 8%;
+  height: 50%;
+  border: none;
+  margin-right: 7vw;
+  transition: 150ms all ease-in-out;
+  @include back-color-alpha($color-secondary, 0.8);
+
+  &:hover {
+    background-color: $color-light-two;
+  }
+
+  @include media('mobile') {
+    display: none;
+  }
+}
+
+//--------------------------------------------> mobile menu btn
+.nav-mobile--menu-btn {
+  cursor: pointer;
+  margin-right: 8%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 2px;
+  transition: 300ms all ease-in-out;
+  @include light-div(25px, 40px, flex);
+  @include back-color-alpha($color-secondary, 0.8);
+
+  @include media('tablet') {
+    display: none;
+  }
+
+  p {
+    @include set-font(
+      $font_red-hat-text,
+      500,
+      clamp(0.5rem, 0.9vw, 0.5rem),
+      $color-primary,
+      0
+    );
+  }
+  &.open {
+    @include back-color-alpha(rgb(203, 83, 83), 0.9);
+  }
+}
+
+.nav-menu--img {
+  width: 40%;
+  height: 40%;
+  object-fit: contain;
+  // transform: rotate(0);
+  transition: 300ms all ease-in-out;
+}
+
+.nav-menu--img.menu-open {
+  transform: rotate(45deg);
+  transition: 300ms all ease-in-out;
+}
+//--------------------------------------------> mobile menu links
+.nav-mobile--links-div {
+  @include div(25vh, 25%, flex, $color-light-two);
+  top: 9vh;
+  right: 10px;
+  opacity: 1;
+  position: absolute;
+  padding-left: 10%;
+  flex-direction: column;
+  min-height: 150px;
+  z-index: 3;
+  justify-content: space-around;
+  transition: 300ms all ease-in-out;
+  box-shadow: 0 4px 10px 0 rgba($color-dark, 0.4);
+  @include back-color-alpha($color-light-two, 0.9);
+
+  @include media('tablet') {
+    display: none;
+    z-index: -1;
+  }
+}
+
+// close mobile link
+.mobile-link-closed {
+  top: -10px;
+  opacity: 0;
+  height: 30px;
+  pointer-events: none;
 }

@@ -25,13 +25,16 @@
     "html-webpack-plugin": "^5.4.0",
     "sass-loader": "^12.2.0",
     "style-loader": "^3.3.0",
+    "svg-url-loader": "^7.1.1",
     "webpack": "^5.58.2",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.3.1"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "sass": "^1.43.2"
+    "sass": "^1.43.2",
+    "typeit-react": "^2.0.3"
   }
 }

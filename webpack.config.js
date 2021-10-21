@@ -23,17 +23,17 @@ module.exports = {
   //-->  main odule settings
   module: {
     rules: [
-      //-->  js rule
+      //-->  js loader(s)
       {
         test: /\.js$/,
         use: 'babel-loader',
       },
-      //-->  css rule
+      //-->  css loader(s)
       {
         test: /\.css/,
         use: ['style-loader', 'css-loader'],
       },
-      //-->  sass rule
+      //-->  sass loader(s)
       {
         test: /\.s[ac]ss$/,
         use: [
@@ -43,6 +43,18 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               implementation: require('sass'),
+            },
+          },
+        ],
+      },
+      //-->  svg loader(s)
+      {
+        test: /\.svg$/i,
+        use: [
+          {
+            loader: 'svg-url-loader',
+            options: {
+              limit: 10000,
             },
           },
         ],

@@ -6,11 +6,15 @@
 $breakPoints: (
   'mobile': screen and
     (
-      max-width: 500px,
+      max-width: 499px,
     ),
   'tablet': screen and
     (
       min-width: 500px,
+    ),
+  'medium-max': screen and
+    (
+      max-width: 800px,
     ),
   'medium': screen and
     (
