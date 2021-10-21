@@ -59,7 +59,7 @@
 # query break points with the term 'media'
     - mobile - max #500px
     - tablet - min #500px
-    - medium - min #1000px
+    - medium - min #1024px
     - desktop - min #1300px
     - medium-max - max #800px
 

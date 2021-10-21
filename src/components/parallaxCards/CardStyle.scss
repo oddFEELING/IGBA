@@ -5,9 +5,9 @@
 .card-container {
   @include div(100%, 20%, flex, $color-primary);
   min-width: 200px;
-  min-height: 350px;
+  min-height: 300px;
   align-items: center;
-  padding: 2.5% 5%;
+  padding: 40px 4%;
   cursor: url(../../assets/images/icons/card-hover-icon.png), auto;
   flex-direction: column;
   transform-style: preserve-3d;
@@ -21,10 +21,17 @@
     box-shadow: 0 4px 10px 0 rgba($color-dark, 0.4);
   }
 
-  @include media('mobile') {
+  //   mobile and tablet screens
+  @include media('medium-max') {
     min-height: 310px;
     min-width: 220px;
     padding-bottom: 13%;
+    padding: 20px 5%;
+  }
+
+  @media (min-width: 801px) and (max-width: 1100px) {
+    min-width: 150px;
+    min-height: 200px;
   }
 }
 
@@ -35,10 +42,16 @@
   align-items: center;
   transform-style: preserve-3d;
   justify-content: center;
-  transform: translateZ(15px);
+  transform: translateZ(20px);
 
-  @include media('mobile') {
+  //   mobile screen and tablets
+  @include media('medium-max') {
     @include div(120px, 120px, flex, rgba($color-light, 0.4));
+  }
+
+  //   mid range screen optimization
+  @media (min-width: 801px) and (max-width: 1100px) {
+    @include div(100px, 100px, flex, rgba($color-light, 0.4));
   }
 }
 .card-circle--two {
@@ -49,8 +62,14 @@
   justify-content: center;
   transform: translateZ(15px);
 
-  @include media('mobile') {
+  //   mobile and tablet screens
+  @include media('medium-max') {
     @include div(100px, 100px, flex, rgba($color-light, 0.4));
+  }
+
+  //   mid range screen optimization
+  @media (min-width: 801px) and (max-width: 1100px) {
+    @include div(80px, 80px, flex, rgba($color-light, 0.4));
   }
 }
 
@@ -60,10 +79,16 @@
   align-items: center;
   transform-style: preserve-3d;
   justify-content: center;
-  transform: translateZ(15px);
+  transform: translateZ(20px);
 
-  @include media('mobile') {
+  //   mobile and tablet screen
+  @include media('medium-max') {
     @include div(80px, 80px, flex, rgba($color-light, 0.4));
+  }
+
+  //   mid range screen optimization
+  @media (min-width: 801px) and (max-width: 1100px) {
+    @include div(60px, 60px, flex, rgba($color-light, 0.4));
   }
 }
 
@@ -75,8 +100,14 @@
   justify-content: center;
   transform: translateZ(15px);
 
-  @include media('mobile') {
+  //   mobile and tablet screens
+  @include media('medium-max') {
     @include div(60px, 60px, flex, rgba($color-light, 0.4));
+  }
+
+  //   mid range screen optimization
+  @media (min-width: 801px) and (max-width: 1100px) {
+    @include div(50px, 50px, flex, rgba($color-light, 0.4));
   }
 }
 
@@ -86,11 +117,18 @@
   height: 80px;
   object-fit: contain;
   object-position: center;
-  transform: translateZ(25px);
+  transform: translateZ(30px);
 
-  @include media('mobile') {
+  //   mobile and tablet screens
+  @include media('mobmedium-maxile') {
     width: 60px;
     height: 60px;
+  }
+
+  //   mid range screen optimization
+  @media (min-width: 801px) and (max-width: 1100px) {
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -103,17 +141,18 @@
     $color-light-two,
     0
   );
-  transform: translateZ(50px);
+  transform: translateZ(60px);
+  text-shadow: 0 3px 9px rgba($color-dark, 0.4);
 }
 
 .card-content--text {
   @include set-font(
     $font_barlow,
     300,
-    clamp(0.5rem, 2.5vw, 1rem),
+    clamp(0.8rem, 1.4vw, 0.9rem),
     $color-light-two,
     0
   );
-  transform: translateZ(40px);
+  transform: translateZ(50px);
   width: 85%;
 }

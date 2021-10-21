@@ -10,6 +10,7 @@ $content-area-margin: 8vw;
   padding: 0 2%;
   min-height: 500px;
   align-items: center;
+  cursor: url(../../assets/images/icons/location-cursor.png), auto;
   justify-content: space-between;
 }
 
@@ -48,12 +49,12 @@ $content-area-margin: 8vw;
   @include set-font(
     $font_red-hat-text,
     300,
-    clamp(1rem, 1.7vw, 10rem),
+    clamp(1rem, 1.6vw, 10rem),
     $color-light-two,
     0
   );
   margin-left: $content-area-margin;
-  margin-top: -2vh;
+  margin-top: -1.7vh;
   letter-spacing: 3px;
 
   @include media('medium-max') {
@@ -68,6 +69,7 @@ $content-area-margin: 8vw;
   }
 }
 
+// content area button
 .content-area--btn {
   @include div(8%, 45%, flex, $color-secondary);
   margin-left: $content-area-margin;
@@ -77,8 +79,9 @@ $content-area-margin: 8vw;
   align-items: center;
   justify-content: center;
   border-radius: 7px;
-  transition: background 300ms ease-in-out 0;
+  transition: 300ms all ease-in-out 0;
   -webkit-transition: background-color 300ms ease-in-out;
+  cursor: url(../../assets/images/icons/location-cursor-hover.png), pointer;
 
   &:hover {
     @include back-color-alpha($color-light, 1);
@@ -97,16 +100,24 @@ $content-area-margin: 8vw;
   body[data-aos-delay='4000'] [data-aos].aos-animate {
     transition-delay: 4s;
   }
+
+  // mid ranged screen optimization
+  @media (min-width: 801px) and (max-width: 1100px) {
+    height: 6%;
+  }
 }
 
 .content-area--btn-text {
   @include set-font(
     $font_red-hat-text,
     500,
-    clamp(1rem, 1.1vw, 2rem),
+    clamp(0.8rem, 1.2vw, 2rem),
     $color-primary,
     0
-  );
+  ); // optimizing speciallly for ipad
+  @media (min-width: 701px) and (max-width: 800px) {
+    font-size: 24px;
+  }
 }
 
 .content-area--btn-icon {

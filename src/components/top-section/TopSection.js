@@ -1,13 +1,13 @@
 import React from 'react';
 import Cards from '../parallaxCards/Cards';
 import './TopSectStyle.scss';
-import CardData from '../../data/top-section-data/Data';
+import CardData, { Title } from '../../data/top-section-data/Data';
 
 const TopSection = () => {
   return (
-    <div className='top-section-container'>
+    <section className='top-section-container'>
       {/* ----- title text ----- */}
-      <h2 className='top-section-title'>Mapping development with ease</h2>
+      <h2 className='top-section--title'>{Title}</h2>
 
       {/* ----- card div ----- */}
       <div className='top-card--container'>
@@ -25,7 +25,7 @@ const TopSection = () => {
       </div>
 
       {/* ----- browse features ----- */}
-    </div>
+    </section>
   );
 };
 
