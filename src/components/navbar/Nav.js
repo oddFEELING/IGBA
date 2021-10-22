@@ -4,7 +4,7 @@ import useScrollY from '../../hooks/useScrollY';
 import logo from '../../assets/svg/location-pin.svg';
 import menu from '../../assets/svg/menu-icon.svg';
 //-->  import data to display on links
-import Links from '../../data/navbar-data/Data';
+import Links from '../../data/navbar-data/NavData';
 
 const Nav = () => {
   const [menuIsOpen, setmenuIsOpen] = useState(false);

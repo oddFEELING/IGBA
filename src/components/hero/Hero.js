@@ -1,11 +1,20 @@
 import React from 'react';
 import './Hero.scss';
 import AOS from 'aos';
+import Tilt from 'react-parallax-tilt';
 import DescType from './DescType';
 import map_img from '../../assets/svg/hero-map.svg';
 import arrow_icon from '../../assets/svg/arrow-right-icon.svg';
 
 const Hero = () => {
+  //-->  put options into an object
+  const TiltOptions = {
+    tiltMaxAngleX: 1,
+    tiltMaxAngleY: 1,
+    perspective: 1000,
+    transitionSpeed: 1500,
+  };
+  //-->  initialize aos
   AOS.init({
     duration: 1000,
   });
@@ -35,14 +44,14 @@ const Hero = () => {
         </div>
       </div>
       {/* ----- image div ----- */}
-      <div className='image-area--div'>
+      <Tilt className='image-area--div' {...TiltOptions}>
         <img
           src={map_img}
           alt=''
           className='image-area--img'
           data-aos='zoom-out'
         />
-      </div>
+      </Tilt>
     </header>
   );
 };

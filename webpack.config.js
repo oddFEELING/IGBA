@@ -11,6 +11,9 @@ module.exports = {
     port: 3000,
   },
 
+  //-->  set source map as dev tool
+  devtool: 'source-map',
+
   //-->  entry file to start bundling
   entry: './src/index.js',
 
@@ -26,7 +29,10 @@ module.exports = {
       //-->  js loader(s)
       {
         test: /\.js$/,
-        use: 'babel-loader',
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+        },
       },
       //-->  css loader(s)
       {
@@ -43,6 +49,7 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               implementation: require('sass'),
+              sourceMap: true,
             },
           },
         ],
@@ -50,14 +57,12 @@ module.exports = {
       //-->  svg loader(s)
       {
         test: /\.svg$/i,
-        use: [
-          {
-            loader: 'svg-url-loader',
-            options: {
-              limit: 10000,
-            },
-          },
-        ],
+        type: 'asset',
+      },
+      //-->  file loader(s)
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        type: 'asset/resource',
       },
     ],
   },
