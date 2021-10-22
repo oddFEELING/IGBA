@@ -1,5 +1,6 @@
 import React from 'react';
-import MidImg from '../../assets/svg/mid-section-img.svg';
+// import MidImg from '../../assets/svg/mid-section-img.svg';
+import MidImg from '../../assets/images/images/mid-section-img.png';
 import './MidSectStyle.scss';
 //-->  import mid section data
 import Content from '../../data/mid-section-data/Data';
