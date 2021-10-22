@@ -161,13 +161,13 @@
   @include set-font(
     $font_barlow,
     400,
-    clamp(0.62rem, 2vw, 1.1rem),
+    clamp(0.8rem, 2vw, 1.1rem),
     $color-primary,
     0
   );
   width: 75%;
 
   @include media('medium-max') {
-    width: 90%;
+    width: 86%;
   }
 }
