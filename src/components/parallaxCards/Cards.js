@@ -1,12 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import AOS from 'aos';
 import Tilt from 'react-parallax-tilt';
 import './CardStyle.scss';
 
 const Cards = (props) => {
-  //-->  set hover state for class name
-  const [isHovered, setIsHovered] = useState(false);
-
   AOS.init({
     duration: 1000,
   });
