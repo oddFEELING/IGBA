@@ -45,7 +45,7 @@
 // card container
 .feature-card {
   @include div(30%, 80%, flex, transparent);
-  min-width: 250px;
+  min-width: 230px;
   align-items: center;
   justify-content: center;
   gap: 30px;
@@ -61,7 +61,7 @@
 
   // for medium-max screens
   @include media('medium-max') {
-    width: 95%;
+    width: 90%;
     max-width: 380px;
     height: 32%;
     flex-direction: column;
@@ -70,7 +70,7 @@
 
   // change height for mid sized desktop
   @media (max-width: 1200px) {
-    width: 90%;
+    width: 83%;
   }
 }
 
