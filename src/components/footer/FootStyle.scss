@@ -1,7 +1,53 @@
 @use '../../Theme/create-div.scss' as *;
 @use '../../Theme/Theme.scss' as *;
+@use '../../Theme/media-queries.scss' as *;
 
 .foot-container {
-  @include dark-div(40vh, 80%, flex);
+  @include dark-div(auto, 80%, flex);
+  align-items: center;
+  gap: 15px;
+  min-height: 40vh;
   padding: 20px 10%;
+  flex-direction: column;
+}
+
+//--------------------------------------------> title section
+.foot-title--container {
+  @include div(10vh, 100%, flex, transparent);
+  align-items: center;
+}
+
+.foot-title--text {
+  @include set-font(
+    $font_red-hat-text,
+    800,
+    clamp(1.3rem, 1.7vw, 3rem),
+    $color-secondary,
+    0
+  );
+}
+
+.foot-title--img {
+  width: 2%;
+  min-width: 18px;
+  height: 75%;
+  object-fit: contain;
+  object-position: center;
+}
+
+// container for the sections
+.foot-section--container {
+  @include div(auto, 100%, flex, green);
+  min-height: 30vh;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  // change flex orientaion for tablet and mobile screens
+  @include media('medium-max') {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
 }
