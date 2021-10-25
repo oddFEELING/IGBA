@@ -7,9 +7,14 @@
   align-items: center;
   gap: 15px;
   bottom: 0;
-  min-height: 40vh;
+  min-height: 300px;
   padding: 20px 10%;
   flex-direction: column;
+
+  // set min height for mobile to avoid squeeze
+  @include media('medium-max') {
+    min-height: 600px;
+  }
 }
 
 //--------------------------------------------> title section
@@ -65,14 +70,14 @@
   @include set-font(
     $font_barlow,
     600,
-    clamp(1.3rem, 1.6vw, 3rem),
+    clamp(1.1rem, 1.5vw, 3rem),
     $color-light-two,
     0
   );
   font-style: italic;
   letter-spacing: 1.5px;
   margin-bottom: 10px;
-  width: 55%;
+  width: 60%;
   margin-left: -3vw;
   display: inline;
   padding-bottom: 2px;
@@ -183,7 +188,8 @@
   height: 50%;
   border: none;
   padding: 2% 3%;
-  border-radius: 3px;
+  border-radius: 5px;
+  transition: 300ms all ease-in-out;
   caret-color: rgba($color-secondary, 0.6);
   @include back-color-alpha($color-light-two, 0.3);
   // set text
@@ -204,6 +210,7 @@
 
   &:focus {
     outline: thin solid $color-secondary;
+    transition: 300ms all ease-in-out;
   }
 }
 
@@ -214,6 +221,7 @@
   right: -3vw;
   top: -3%;
   border: none;
+  // border-radius: 3px;
   background-color: $color-secondary;
   transition: 300ms all ease-in-out;
   box-shadow: 5px 5px 10px 5px rgba($color-dark, 0.5);
@@ -228,9 +236,9 @@
   font-style: italic;
 
   &:hover {
-    background-color: $color-light-two;
+    background-color: rgba($color-light-two, 0.8);
     font-weight: 500;
-    transform: scale(1.03);
+    transform: scale(1.08) rotate(2deg) translateY(-0.5vh);
     cursor: url(../../assets/images/icons/location-cursor-hover.svg), auto;
   }
 }
