@@ -24,6 +24,16 @@
   @include media('mobile') {
     height: 450px;
   }
+
+  //-------------------------------------------->
+  //--> Special optimization for ipad and ipad pro
+  /* ipad(768 x 1024) --- ipad pro(1024 x 1366) */
+  //-------------------------------------------->
+  @media screen and (min-width: 750px),
+    (max-height: 1366px) and (orientation: potrait) {
+    max-height: 300px;
+    padding: 0 6%;
+  }
 }
 
 .mid-section--img {

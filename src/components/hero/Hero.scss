@@ -10,7 +10,7 @@ $content-area-margin: 8vw;
   padding: 0 2%;
   min-height: 500px;
   align-items: center;
-  cursor: url(../../assets/images/icons/location-cursor.png), auto;
+  cursor: url(../../assets/images/icons/location-cursor.svg), auto;
   justify-content: space-between;
 }
 
@@ -81,7 +81,7 @@ $content-area-margin: 8vw;
   border-radius: 7px;
   transition: 300ms all ease-in-out 0;
   -webkit-transition: background-color 300ms ease-in-out;
-  cursor: url(../../assets/images/icons/location-cursor-hover.png), pointer;
+  cursor: url(../../assets/images/icons/location-cursor-hover.svg), pointer;
 
   &:hover {
     @include back-color-alpha($color-light, 1);
