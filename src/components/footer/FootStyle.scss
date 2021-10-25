@@ -6,6 +6,7 @@
   @include dark-div(auto, 80%, flex);
   align-items: center;
   gap: 15px;
+  bottom: 0;
   min-height: 40vh;
   padding: 20px 10%;
   flex-direction: column;
@@ -15,13 +16,14 @@
 .foot-title--container {
   @include div(10vh, 100%, flex, transparent);
   align-items: center;
+  margin-left: -8vw;
 }
 
 .foot-title--text {
   @include set-font(
     $font_red-hat-text,
     800,
-    clamp(1.3rem, 1.7vw, 3rem),
+    clamp(1.3rem, 1.9vw, 3.5rem),
     $color-secondary,
     0
   );
@@ -35,12 +37,18 @@
   object-position: center;
 }
 
+.foot-title--line {
+  @include div(1.5px, 50%, block, $color-secondary);
+  border-radius: 10px;
+  margin-left: 20px;
+}
 // container for the sections
 .foot-section--container {
-  @include div(auto, 100%, flex, green);
+  @include div(auto, 90%, flex, transparent);
+  padding: 0 5%;
   min-height: 30vh;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 
   // change flex orientaion for tablet and mobile screens
@@ -49,5 +57,180 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
+  }
+}
+
+// title text for all sections
+.section--title {
+  @include set-font(
+    $font_barlow,
+    600,
+    clamp(1.3rem, 1.6vw, 3rem),
+    $color-light-two,
+    0
+  );
+  font-style: italic;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+  width: 55%;
+  margin-left: -3vw;
+  display: inline;
+  padding-bottom: 2px;
+  border-bottom: 2px solid rgba($color-light-two, 0.3);
+}
+
+//-------------------------------------------->   link section
+
+.foot-link--section {
+  @include div(auto, 100%, flex, transparent);
+  flex-direction: column;
+  gap: 20px;
+
+  // mobile settings
+  @include media('medium-max') {
+    gap: 10px;
+  }
+}
+
+.link-section--link {
+  @include set-font(
+    $font_barlow,
+    300,
+    clamp(0.6rem, 1vw, 1.7vw),
+    rgba($color-light-two, 1),
+    0
+  );
+  text-decoration: none;
+  transition: 300ms all ease-in-out;
+
+  &:hover {
+    color: $color-secondary;
+    font-weight: 500;
+    transform: scale(1.03);
+    cursor: url(../../assets/images/icons/location-cursor-hover.svg), auto;
+  }
+
+  // increase font for mobile
+  @include media('medium-max') {
+    font-size: clamp(1rem, 1.2vw, 3rem);
+  }
+}
+//--------------------------------------------> connect section
+.foot-connect--section {
+  @include div(auto, 100%, flex, transparent);
+  flex-direction: column;
+  gap: 10px;
+}
+
+// handle container for icon and text
+.connect-section--handle-container {
+  @include div(auto, 100%, flex, transparent);
+  align-items: center;
+  gap: 5%;
+}
+
+// handle icon
+.connect-section-img {
+  width: 30%;
+  height: 100%;
+  object-position: center;
+  object-fit: contain;
+}
+
+// handle text
+.connect-section--handle {
+  @include set-font(
+    $font_barlow,
+    300,
+    clamp(0.7rem, 1vw, 1.8rem),
+    $color-light-two,
+    0
+  );
+
+  // increase font for mobile
+  @include media('medium-max') {
+    font-size: clamp(1rem, 1.2vw, 3rem);
+  }
+}
+
+//-------------------------------------------->  newsletter section
+
+.foot-newsletter--section {
+  @include div(150px, 100%, flex, transparent);
+  flex-direction: column;
+}
+
+// form container
+.newsletter-section--container {
+  @include div(40%, 90%, flex, transparent);
+  align-self: center;
+  position: relative;
+  margin-top: 30px;
+  flex-direction: column-reverse;
+
+  @media (max-width: 1300px) and (min-width: 801px) {
+    height: 30%;
+  }
+
+  @include media('medium-max') {
+    width: 70%;
+    align-self: flex-start;
+  }
+}
+
+.newsletter-section--input {
+  width: 85%;
+  height: 50%;
+  border: none;
+  padding: 2% 3%;
+  border-radius: 3px;
+  caret-color: rgba($color-secondary, 0.6);
+  @include back-color-alpha($color-light-two, 0.3);
+  // set text
+  @include set-font(
+    $font_barlow,
+    600,
+    clamp(0.8rem, 1.1vw, 1.8rem),
+    $color-primary,
+    0
+  );
+  letter-spacing: 1px;
+  font-style: italic;
+
+  &::placeholder {
+    color: rgba($color-primary, 0.5);
+    font-style: italic;
+  }
+
+  &:focus {
+    outline: thin solid $color-secondary;
+  }
+}
+
+.newsletter-section--button {
+  width: 50%;
+  height: 60%;
+  position: absolute;
+  right: -3vw;
+  top: -3%;
+  border: none;
+  background-color: $color-secondary;
+  transition: 300ms all ease-in-out;
+  box-shadow: 5px 5px 10px 5px rgba($color-dark, 0.5);
+  // set text
+  @include set-font(
+    $font_barlow,
+    500,
+    clamp(0.7rem, 1vw, 1.8rem),
+    $color-primary,
+    0
+  );
+  font-style: italic;
+
+  &:hover {
+    background-color: $color-light-two;
+    font-weight: 500;
+    transform: scale(1.03);
+    cursor: url(../../assets/images/icons/location-cursor-hover.svg), auto;
   }
 }

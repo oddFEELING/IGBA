@@ -16,6 +16,7 @@ const Foot = () => {
       <div className='foot-title--container'>
         <h3 className='foot-title--text'>IGBA</h3>
         <img src={Logo} alt='' className='foot-title--img' />
+        <div className='foot-title--line' />
       </div>
 
       {/* ----- footer section divs ----- */}
@@ -51,15 +52,15 @@ const Foot = () => {
 
         {/* ----- newsletter section ----- */}
         <div className='foot-newsletter--section'>
-          <h4 className='section--title'>Subscribe</h4>
+          <h4 className='section--title'>Newsletter</h4>
 
-          <form className='newsletter-section-container' type='post'>
+          <form className='newsletter-section--container' type='post'>
             <input
               required
               name='email'
               type='email'
               className='newsletter-section--input'
-              placeholder='Enter your email'
+              placeholder='Enter your email...'
             />
             <button
               type='reset'
