@@ -20,3 +20,8 @@
     - Style-loader
     - Css-loader
     - Sass-loader
+
+|---------------------|
+|--- Not templated ---|
+|------ With CRA -----|
+|---------------------|
