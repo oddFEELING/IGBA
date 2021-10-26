@@ -31,7 +31,7 @@
 //-------------------------------------------->  Title text
 .top-section--title {
   @include set-font(
-    $font_barlow,
+    $font_2,
     700,
     clamp(1.8rem, 2.5vw, 3rem),
     $color-primary,

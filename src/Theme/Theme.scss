@@ -5,17 +5,18 @@
 //-------------------------------------------->
 //--> color SCheme
 //-------------------------------------------->
-$color-primary: #14213d;
-$color-secondary: #fca311;
-$color-light: #ffffff;
-$color-light-two: #f1f1f1;
-$color-dark: #1e1e1e;
+$color-primary: #083d77; //--> initial color - #14213d;
+$color-secondary: #ffcd24; //--> initial color - #fca311;
+$color-light: #ffffff; //--> retained
+$color-light-two: #f1f1f1; //--> retained
+$color-dark: #33393d; //--> initial color - #1e1e1e;
 
 //-------------------------------------------->
 //--> Fonts
 //-------------------------------------------->
 $font_red-hat-text: 'Red Hat Text', sans-serif;
 $font_barlow: 'Barlow', sans-serif;
+$font_nato: 'Noto Sans', sans-serif;
 
 //-------------------------------------------->
 //--> MIXINS
@@ -34,3 +35,8 @@ $font_barlow: 'Barlow', sans-serif;
 @mixin back-color-alpha($color, $value) {
   background-color: rgba($color, $value);
 }
+
+// --> Set golbal fonts
+
+$font_1: $font_red-hat-text;
+$font_2: $font_barlow;

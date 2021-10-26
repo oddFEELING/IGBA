@@ -8,7 +8,7 @@ module.exports = {
 
   //-->  development server
   devServer: {
-    port: 3000,
+    port: 3001,
   },
 
   //-->  set source map as dev tool
@@ -36,7 +36,7 @@ module.exports = {
       },
       //-->  css loader(s)
       {
-        test: /\.css/,
+        test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
       //-->  sass loader(s)

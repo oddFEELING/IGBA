@@ -83,7 +83,7 @@
 //  Title text
 .mid-section--title {
   @include set-font(
-    $font_barlow,
+    $font_2,
     700,
     clamp(1.6rem, 3.2vw, 3.5rem),
     $color-light-two,
@@ -97,7 +97,7 @@
 // content text
 .mid-section--content {
   @include set-font(
-    $font_barlow,
+    $font_2,
     200,
     clamp(1.1rem, 1.9vw, 1.8rem),
     $color-light-two,

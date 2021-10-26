@@ -1,4 +1,7 @@
+@use './Theme/Theme.scss' as *;
+
 body {
   margin: 0;
   box-sizing: border-box;
+  font-family: $font_1;
 }
