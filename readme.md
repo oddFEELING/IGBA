@@ -2,7 +2,7 @@
 🖋author: oddFEELING
 
 //------------------------------>
-<img src = '/public/readme-img.png' alt = '' width = '350' height = '250'>
+<img src = '/public/readme-img.png' alt = '' width = '100%' height = '350'>
 
 # ⚙ Tools
 
