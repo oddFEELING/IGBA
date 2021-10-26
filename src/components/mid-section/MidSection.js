@@ -16,7 +16,13 @@ const MidSection = () => {
         <p className='mid-section--content'>{Content.content}</p>
       </div>
       {/* ----- image area div ----- */}
-      <img src={MidImg} alt='' className='mid-section--img' />
+      <img
+        src={MidImg}
+        alt=''
+        className='mid-section--img'
+        data-aos='fade-left'
+        data-aos-delay='200'
+      />
     </section>
   );
 };
