@@ -21,7 +21,5 @@
     - Css-loader
     - Sass-loader
 
-| --- Not templated --- |
-| --------------------- |
-| ------ With CRA ----- |
-| --------------------- |
+| Not templated |
+| With CRA |
