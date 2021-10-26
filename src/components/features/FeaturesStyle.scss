@@ -18,7 +18,7 @@
 
 .feature--title {
   @include set-font(
-    $font_barlow,
+    $font_2,
     600,
     clamp(1.6rem, 3vw, 3.5rem),
     $color-primary,
@@ -143,7 +143,7 @@
 // title
 .feature-card--title {
   @include set-font(
-    $font_barlow,
+    $font_2,
     500,
     clamp(1.4rem, 3vw, 2.2rem),
     $color-primary,
@@ -159,7 +159,7 @@
 // content
 .feature-card--content {
   @include set-font(
-    $font_barlow,
+    $font_2,
     400,
     clamp(0.8rem, 2vw, 1.1rem),
     $color-primary,

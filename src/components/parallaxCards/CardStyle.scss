@@ -135,7 +135,7 @@
 //--------------------------------------------> card texts
 .card-content--title {
   @include set-font(
-    $font_barlow,
+    $font_2,
     600,
     clamp(1.3rem, 2vw, 2rem),
     $color-light-two,
@@ -147,7 +147,7 @@
 
 .card-content--text {
   @include set-font(
-    $font_barlow,
+    $font_2,
     300,
     clamp(0.8rem, 1.4vw, 0.9rem),
     $color-light-two,

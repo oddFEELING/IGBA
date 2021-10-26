@@ -30,7 +30,7 @@ $content-area-margin: 8vw;
 
 .content-area--title {
   @include set-font(
-    $font_red-hat-text,
+    $font_1,
     800,
     clamp(3.2rem, 7.3vw, 10rem),
     $color-secondary,
@@ -47,7 +47,7 @@ $content-area-margin: 8vw;
 
 .content-area--desc {
   @include set-font(
-    $font_red-hat-text,
+    $font_1,
     300,
     clamp(1rem, 1.6vw, 10rem),
     $color-light-two,
@@ -109,7 +109,7 @@ $content-area-margin: 8vw;
 
 .content-area--btn-text {
   @include set-font(
-    $font_red-hat-text,
+    $font_1,
     500,
     clamp(0.8rem, 1.2vw, 2rem),
     $color-primary,
