@@ -23,17 +23,20 @@
   // reduce height for mobile screens
   @include media('mobile') {
     height: 450px;
+    width: 88%;
+    padding: 0 6%;
   }
 
   //-------------------------------------------->
   //--> Special optimization for ipad and ipad pro
   /* ipad(768 x 1024) --- ipad pro(1024 x 1366) */
   //-------------------------------------------->
-  @media screen and (min-width: 750px),
-    (max-height: 1366px) and (orientation: potrait) {
-    max-height: 300px;
-    padding: 0 6%;
-  }
+  // @media screen and (min-width: 750px),
+  //   (max-height: 1366px) and (orientation: potrait) {
+  //   max-height: 300px;
+  //   width: 88%;
+  //   padding: 0 6%;
+  // }
 }
 
 .mid-section--img {
