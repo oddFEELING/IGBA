@@ -11,7 +11,7 @@
   justify-content: space-between;
   transition: 300ms all ease-in-out;
   position: fixed;
-  cursor: url(../../assets/images/icons/location-cursor.png), auto;
+  cursor: url('../../assets/images/icons/location-cursor.svg'), auto;
 }
 
 .nav-scrolled {
@@ -79,6 +79,13 @@
 }
 
 .nav-link.mobile {
+  @include set-font(
+    $font_1,
+    500,
+    clamp(0.8rem, 1.2vw, 1.3rem),
+    $color-light-two,
+    0
+  );
   color: $color-primary;
   display: inline;
 }
@@ -112,7 +119,6 @@
 
 //--------------------------------------------> mobile menu btn
 .nav-mobile--menu-btn {
-  cursor: pointer;
   margin-right: 8%;
   display: flex;
   align-items: center;
@@ -120,7 +126,7 @@
   justify-content: center;
   border-radius: 2px;
   transition: 300ms all ease-in-out;
-  @include light-div(25px, 40px, flex);
+  @include light-div(35px, 40px, flex);
   @include back-color-alpha($color-secondary, 0.8);
   cursor: url(../../assets/images/icons/location-cursor-hover.png), pointer;
 
@@ -132,7 +138,7 @@
     @include set-font(
       $font_1,
       500,
-      clamp(0.5rem, 0.9vw, 0.5rem),
+      clamp(0.8rem, 0.95vw, 1rem),
       $color-primary,
       0
     );
@@ -162,11 +168,11 @@
   opacity: 1;
   position: absolute;
   padding: 3vh 0;
-  padding-left: 10%;
+  padding-left: 8%;
   flex-direction: column;
   min-height: 150px;
   z-index: 3;
-  gap: 4vh;
+  gap: 3.5vh;
   justify-content: center;
   transition: 300ms all ease-in-out;
   box-shadow: 0 4px 10px 0 rgba($color-dark, 0.4);
