@@ -212,6 +212,11 @@
     outline: thin solid $color-secondary;
     transition: 300ms all ease-in-out;
   }
+
+  @include media('mobile') {
+    width: 130%;
+    height: 45%;
+  }
 }
 
 .newsletter-section--button {
@@ -240,5 +245,12 @@
     font-weight: 500;
     transform: scale(1.08) rotate(2deg) translateY(-0.5vh);
     cursor: url(../../assets/images/icons/location-cursor-hover.svg), auto;
+  }
+
+  @include media('mobile') {
+    width: 65%;
+    height: 45%;
+    right: -25vw;
+    top: 5%;
   }
 }
