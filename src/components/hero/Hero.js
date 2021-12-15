@@ -1,12 +1,14 @@
 import React from 'react';
 import './Hero.scss';
 import AOS from 'aos';
+import { useHistory } from 'react-router-dom';
 import Tilt from 'react-parallax-tilt';
 import DescType from './DescType';
 import map_img from '../../assets/svg/hero-map.svg';
 import arrow_icon from '../../assets/svg/arrow-right-icon.svg';
 
 const Hero = () => {
+  const hist = useHistory();
   //-->  put options into an object
   const TiltOptions = {
     tiltMaxAngleX: 1,
@@ -38,8 +40,12 @@ const Hero = () => {
           <DescType />
         </h3>
         {/* CTA BTN */}
-        <div className='content-area--btn' {...BtnAnimation}>
-          <p className='content-area--btn-text'>Take a tour</p>
+        <div
+          className='content-area--btn'
+          {...BtnAnimation}
+          onClick={() => hist.push('/auth')}
+        >
+          <p className='content-area--btn-text'>Get started</p>
           <img src={arrow_icon} alt='' className='content-area--btn-icon' />
         </div>
       </div>

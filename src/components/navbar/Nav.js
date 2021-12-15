@@ -48,7 +48,7 @@ const Nav = () => {
       </nav>
 
       {/* ----- CTA BTN ----- */}
-      <button className='nav-cta'>Subscribe</button>
+      <button className='nav-cta'>Let's go</button>
 
       {/* ----- mobile menu BTN ----- */}
       <div

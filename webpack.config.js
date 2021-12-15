@@ -4,11 +4,12 @@ const path = require('path');
 //--------------------------------------->  main module export
 module.exports = {
   //-->  build mode
-  mode: 'development',
+  mode: 'production',
 
   //-->  development server
   devServer: {
     port: 3001,
+    contentBase: './build',
   },
 
   //-->  set source map as dev tool
