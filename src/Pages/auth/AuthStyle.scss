@@ -1,0 +1,27 @@
+@use '../../Theme/create-div.scss' as *;
+@use '../../Theme/create-div.scss' as *;
+@use '../../Theme/Theme.scss' as *;
+
+.auth-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.login-auth--section {
+  @include dark-div(100vh, 70%, flex);
+  position: relative;
+  align-items: center;
+}
+
+.auth-icon {
+  width: 45vw;
+  height: 80vh;
+  pointer-events: none;
+  object-fit: contain;
+  position: absolute;
+  right: -18vw;
+}
